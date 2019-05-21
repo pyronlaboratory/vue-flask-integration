@@ -1,5 +1,33 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div id="app" class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-10 col-md-6">
+        <h1 class="text-center">{{title}}</h1>
+        <app-form></app-form>
+      </div>
+    </div>
   </div>
 </template>
+
+<script>
+import Vue from 'vue';
+import Form from './components/form/Form.vue';
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      title: 'This is the Vue-Flask Integrated Login Page!'
+    }
+  },
+  components: {
+    appForm: Form
+  }
+}
+</script>
+
+<style lang="sass">
+  h1 { margin-bottom: 30px; }
+  body {background: #42cef4;}
+  #app { padding: 20px; }
+</style>
